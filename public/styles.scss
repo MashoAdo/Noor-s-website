@@ -190,5 +190,32 @@ a {
 
 .service-items {
 	display: grid;
-	grid-template-columns: auto auto;
+	grid-template-columns: auto;
+	.icon1 {
+		color: $first-color;
+		margin-right: 7px;
+	}
+}
+
+// ===========FEATURES SECTION===========//
+
+.features-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.icon-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	.icon {
+		color: $first-color;
+		font-size: 2rem;
+	}
+	p {
+		padding: 0 2rem;
+		text-align: center;
+	}
 }
