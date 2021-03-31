@@ -178,6 +178,7 @@ a {
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
+	padding: 2rem;
 	ul {
 		text-align: start;
 		margin: 2rem 1rem 0.5rem;
@@ -202,7 +203,9 @@ a {
 .features-section {
 	display: flex;
 	flex-direction: column;
+	text-align: center;
 	align-items: center;
+	padding-top: 2rem;
 }
 
 .icon-info {
@@ -217,5 +220,84 @@ a {
 	p {
 		padding: 0 2rem;
 		text-align: center;
+	}
+}
+
+//=================FOOTER SECTION=============//
+
+.payments {
+	text-align: center;
+}
+
+footer {
+	background-color: $dark-color;
+	color: $white-color;
+	text-align: center;
+	padding: 0 2rem;
+
+	.about-team {
+		padding-top: 1rem;
+	}
+	.footer-info {
+		display: flex;
+		flex-direction: column;
+		margin-top: 2rem;
+		align-items: center;
+
+		.footer-social {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			.payments {
+				margin-right: 2rem;
+			}
+		}
+
+		.footer-icons {
+			font-size: 1.15rem;
+			color: $white-color;
+			margin-right: 1.3rem;
+			transition: 0.6s ease-in-out;
+			margin-bottom: 1rem;
+			cursor: pointer;
+			&:hover {
+				transform: scale(1.2);
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.header-toggle,
+	.nav-close,
+	.nav-social {
+		display: none;
+	}
+	.nav-list {
+		display: flex;
+		flex-direction: row;
+		padding-top: 2rem;
+	}
+	.service-info {
+		p {
+			padding: 0 5rem;
+			text-align: center;
+		}
+	}
+	.nav-link {
+		margin-right: 1.5rem;
+	}
+	.icon-info {
+		max-width: 380px;
+		max-height: 250px;
+		text-align: start;
+	}
+	.service-items,
+	.features-icons,
+	.footer-info {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 10px;
 	}
 }

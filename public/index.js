@@ -9,3 +9,14 @@ toggleMenu.addEventListener('click',() => {
 navClose.addEventListener('click',() => {
     navMenu.classList.remove("show")
 })
+
+
+const navlink = document.querySelectorAll(".nav-link");
+ 
+
+function linkAction(){
+    const navMenu = document.getElementById("nav-menu")
+    navMenu.classList.remove("show")
+}
+
+navlink.forEach(n => n.addEventListener("click", linkAction))
