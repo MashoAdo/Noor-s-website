@@ -75,68 +75,143 @@
         <section class="order-section">
             <h1>Make Your Order</h1>
             <form action="">
-                <div>
-                    <label for="service">Type of Service</label>
-                    <select name="service" id="service">
-                        <option></option>
-                        <option value="">From Scratch</option>
-                        <option value="">Revision</option>
-                        <option value="">Proof-Reading</option>
-                    </select>
+                <div class="order-container">
+                    <div class="order-item">
+                        <label for="service">Type of Service</label><br>
+                        <select id="service" required>
+                            <option value="" disabled selected>--select service--</option>
+                            <option value="1">From Scratch</option>
+                            <option value="2">Revision</option>
+                            <option value="3">Proof-Reading</option>
+                        </select>
+                    </div>
+
+                    <div class="order-item">
+                        <label for="AcademicLevel">Academic Level</label><br>
+                        <select name="AcademicLevel" id="AcademicLevel" required>
+                            <option value="" disabled selected>--Select Academic-level--</option>
+                            <option value="1">High School</option>
+                            <option value="2">Diploma</option>
+                            <option value="3">Undergraduate</option>
+                            <option value="4">Masters</option>
+                            <option value="5">PhD</option>
+                        </select>
+                    </div>
+
+                    <div class="order-item">
+                        <label for="service">Partial Page</label><br>
+                        <select name="service" id="PartialPage" required>
+                            <option value="" disabled selected></option>
+                            <option value="1">1/4</option>
+                            <option value="2">1/2</option>
+                            <option value="3">3/4</option>
+                        </select>
+                    </div>
+
+                    <div class="order-item">
+                        <label for="service">Type of Paper</label><br>
+                        <select name="service" id="service" required>
+                            <option value="" disabled selected>--Type of Paper--</option>
+                            <option value="2">Essay</option>
+                            <option value="3">PowerPoint Slides</option>
+                        </select>
+                    </div>
+
+                    <div class="order-item">
+                        <label for="spacing">Spacing</label><br>
+                        <input type="radio" name="spacing" id="spacing">
+                        <label>Double Spaced (250 words)</label><br>
+                        <input type="radio" name="spacing" id="spacing">
+                        <label>single Spaced (500 words)</label><br>
+                    </div>
+                    <div class="order-item">
+                        <label for="deadline">Deadline</label><br>
+                        <select name="" id="deadline" required>
+                            <option value="" disabled selected>--Deadline</option>
+                            <option value="1">Less than 6 Hrs</option>
+                            <option value="2">6Hrs</option>
+                            <option value="3">12Hrs</option>
+                            <option value="4">24Hrs</option>
+                            <option value="5">48Hrs</option>
+                            <option value="6">72Hrs</option>
+                            <option value="7">4days</option>
+                            <option value="8">More than 4 Days</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="order-container">
+                    <div class="order-item">
+                        <label for="field">Field</label><br>
+                        <select name="field" id="field" required>
+                            <option value="" disabled selected>--Field</option>
+                            <option>Mathematics</option>
+                            <option>Chemistry</option>
+                            <option>Biology</option>
+                            <option>Physics</option>
+                            <option>Business</option>
+                            <option>Computer Science</option>
+                            <option>Art</option>
+                            <option>Music</option>
+                            <option>Communication and Media</option>
+                            <option>Journalism</option>
+                            <option>Creative Writing</option>
+                            <option>Public Relations</option>
+                            <option>Economics</option>
+                            <option>Accoounting $ Finance</option>
+                            <option>Case Study</option>
+                            <option>English</option>
+                            <option>History</option>
+                            <option>Law</option>
+                            <option>Marketing</option>
+                            <option>Health and Nutrition</option>
+                            <option>Agriculural Studies</option>
+                            <option>Geography</option>
+                            <option>Philosophy</option>
+                            <option>Web Development</option>
+                            <option>Engineering</option>
+                            <option>other</option>
+                        </select>
+                    </div>
+                    <div class="order-item">
+                        <label for="format">Paper Format</label><br>
+                        <select name="format" id="format" required>
+                            <option value="" disabled selected>--Paper Format--</option>
+                            <option>M.L.A</option>
+                            <option>APA</option>
+                            <option>Chicago/Turabian</option>
+                            <option>Havard</option>
+                            <option>Not Applicable</option>
+                            <option>other</option>
+                        </select>
+                    </div>
+
+                    <div class="order-item">
+                        <label>instructions</label><br>
+                        <textarea name="instruction" rows="8"></textarea>
+                    </div>
+                    <div class="order-item">
+                        <input type="file" multiple>
+                    </div>
                 </div>
 
-                <div>
-                    <label for="AcademicLevel">Academic Level</label>
-                    <select name="AcademicLevel" id="AcademicLevel">
-                        <option value=""></option>
-                        <option value="">High School</option>
-                        <option value="">Diploma</option>
-                        <option value="">Undergraduate</option>
-                        <option value="">Masters</option>
-                        <option value="">PhD</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="service">Partial Page</label>
-                    <select name="service" id="PartialPage">
-                        <option></option>
-                        <option>1/4</option>
-                        <option>1/2</option>
-                        <option>3/4</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="service">Type of Paper</label>
-                    <select name="service" id="service">
-                        <option></option>
-                        <option>Essay</option>
-                        <option>PowerPoint Slides</option>
-
-                    </select>
-                </div>
-
-                <div>
-                    <label for="spacing">Spacing</label><br>
-                    <input type="radio" name="spacing" id="spacing">
-                    <label>Double Spaced (250 words)</label><br>
-                    <input type="radio" name="spacing" id="spacing">
-                    <label>single Spaced (500 words)</label><br>
-                </div>
-                <div>
-                    <label for="deadline">Deadline</label>
-                    <select name="" id="deadline">
-                        <option></option>
-                        <option>Less than 6 Hrs</option>
-                        <option>6Hrs</option>
-                        <option>12Hrs</option>
-                        <option>24Hrs</option>
-                        <option>48Hrs</option>
-                        <option>72Hrs</option>
-                        <option>4days</option>
-                        <option>More than 4 Days</option>
-                    </select>
+                <div class="order-container">
+                    <div class="order-item2">
+                        <label for="firstName">First Name</label><br>
+                        <input type="text" name="firstName" id="firstName">
+                    </div>
+                    <div class="order-item2">
+                        <label for="lastName">Last Name</label><br>
+                        <input type="text" name="lastName" id="lasttName">
+                    </div>
+                    <div class="order-item2">
+                        <label for="email">Email Address</label><br>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="order-item2">
+                        <label for="phone">phone</label><br>
+                        <input type="number" name="number" id="number">
+                    </div>
+                    <button type="submit">Continue</button>
                 </div>
 
             </form>
@@ -225,7 +300,7 @@
         </section>
         <section class="features-section" id="features">
             <h1 class="section-heading">Essential features & guarantees</h1>
-            <div class="features-icons">
+            <div class="features-container">
                 <div class="icon-info">
                     <h1>Original</h1>
                     <ion-icon class="icon" name="thumbs-up-outline"></ion-icon>
