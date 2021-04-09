@@ -174,34 +174,75 @@ a {
 }
 
 //===============ORDER SECTION=====================//
+
 .order-section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-}
-.order-item {
-	label {
-		font-size: 0.9rem;
-		font-weight: bold;
-		color: #282b3a;
-	}
-	select {
-		width: 100%;
-		height: 2.3rem;
-		border: 2px solid;
-		border-color: $dark-color;
-		font-family: poppins, sans-serif;
-		font-size: 0.9rem;
-	}
-	select:required:invalid {
-		color: grey;
-		option[value=""][disabled] {
+	padding-top: 2rem;
+
+	.order-item {
+		label {
+			font-size: 0.9rem;
+			font-weight: bold;
+			color: #282b3a;
+		}
+		select {
+			width: 100%;
+			height: 2.3rem;
+			border: 2px solid $dark-color;
+			font-family: poppins, sans-serif;
+			font-size: 0.9rem;
+			margin-bottom: 1rem;
+		}
+		select:required:invalid {
+			color: grey;
+			option[value=""][disabled] {
+				display: none;
+			}
+			option {
+				color: black;
+				font-family: poppins, sans-serif;
+			}
+		}
+		textarea {
+			width: 100%;
+			border: 2px solid;
+			border-color: $dark-color;
+			font-family: poppins, sans-serif;
+			font-size: 0.9rem;
+		}
+		input[type="file"] {
 			display: none;
 		}
-		option {
-			color: black;
-			font-family: poppins, sans-serif;
+		.custom-file-upload {
+			width: 100%;
+			border: 2px solid $dark-color;
+			display: inline-block;
+			padding: 1.5px 5px;
+			cursor: pointer;
+			.file-add {
+				color: $dark-color;
+				font-size: 1rem;
+				margin-top: 5px;
+			}
 		}
+	}
+	.order-container:nth-child(3) {
+		.item2 {
+			width: 100%;
+			height: 2rem;
+			border: 2px solid $dark-color;
+			margin-bottom: 1rem;
+		}
+	}
+
+	.topic,
+	.page {
+		width: 100%;
+		height: 2rem;
+		border: 2px solid $dark-color;
+		margin-bottom: 1rem;
 	}
 }
 
@@ -286,7 +327,7 @@ footer {
 
 		.footer-social {
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 			align-items: center;
 
 			.payments {
@@ -345,5 +386,13 @@ footer {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 10px;
+	}
+	form {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 4rem;
+	}
+	.file {
+		margin-top: 24px;
 	}
 }

@@ -178,34 +178,76 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 2rem;
 }
 
-.order-item label {
+.order-section .order-item label {
   font-size: 0.9rem;
   font-weight: bold;
   color: #282b3a;
 }
 
-.order-item select {
+.order-section .order-item select {
   width: 100%;
   height: 2.3rem;
+  border: 2px solid #070d1f;
+  font-family: poppins, sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.order-section .order-item select:required:invalid {
+  color: grey;
+}
+
+.order-section .order-item select:required:invalid option[value=""][disabled] {
+  display: none;
+}
+
+.order-section .order-item select:required:invalid option {
+  color: black;
+  font-family: poppins, sans-serif;
+}
+
+.order-section .order-item textarea {
+  width: 100%;
   border: 2px solid;
   border-color: #070d1f;
   font-family: poppins, sans-serif;
   font-size: 0.9rem;
 }
 
-.order-item select:required:invalid {
-  color: grey;
-}
-
-.order-item select:required:invalid option[value=""][disabled] {
+.order-section .order-item input[type="file"] {
   display: none;
 }
 
-.order-item select:required:invalid option {
-  color: black;
-  font-family: poppins, sans-serif;
+.order-section .order-item .custom-file-upload {
+  width: 100%;
+  border: 2px solid #070d1f;
+  display: inline-block;
+  padding: 1.5px 5px;
+  cursor: pointer;
+}
+
+.order-section .order-item .custom-file-upload .file-add {
+  color: #070d1f;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.order-section .order-container:nth-child(3) .item2 {
+  width: 100%;
+  height: 2rem;
+  border: 2px solid #070d1f;
+  margin-bottom: 1rem;
+}
+
+.order-section .topic,
+.order-section .page {
+  width: 100%;
+  height: 2rem;
+  border: 2px solid #070d1f;
+  margin-bottom: 1rem;
 }
 
 .service-container {
@@ -328,10 +370,10 @@ footer .footer-info .footer-social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -398,6 +440,17 @@ footer .footer-info .footer-icons:hover {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
+  }
+  form {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -webkit-column-gap: 4rem;
+            column-gap: 4rem;
+  }
+  .file {
+    margin-top: 24px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

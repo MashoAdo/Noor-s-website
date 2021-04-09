@@ -72,10 +72,9 @@
             </div>
         </section>
 
-        <section class="order-section">
+        <section class="order-section" id="order">
             <h1>Make Your Order</h1>
             <form action="">
-<<<<<<< HEAD
                 <div class="order-container">
                     <div class="order-item">
                         <label for="service">Type of Service</label><br>
@@ -98,17 +97,6 @@
                             <option value="5">PhD</option>
                         </select>
                     </div>
-
-                    <div class="order-item">
-                        <label for="service">Partial Page</label><br>
-                        <select name="service" id="PartialPage" required>
-                            <option value="" disabled selected></option>
-                            <option value="1">1/4</option>
-                            <option value="2">1/2</option>
-                            <option value="3">3/4</option>
-                        </select>
-                    </div>
-
                     <div class="order-item">
                         <label for="service">Type of Paper</label><br>
                         <select name="service" id="service" required>
@@ -119,16 +107,35 @@
                     </div>
 
                     <div class="order-item">
+                        <label for="pages">Number of Pages</label><br>
+                        <input type="number" class="page" id="page" placeholder="0">
+                    </div>
+
+                    <div class="order-item">
+                        <label for="service">Partial Page</label><br>
+                        <select name="service" id="PartialPage" required>
+                            <option value="" disabled selected>--select a partial page--</option>
+                            <option value="1">1/4</option>
+                            <option value="2">1/2</option>
+                            <option value="3">3/4</option>
+                        </select>
+                    </div>
+
+                    <div class="order-item">
                         <label for="spacing">Spacing</label><br>
                         <input type="radio" name="spacing" id="spacing">
                         <label>Double Spaced (250 words)</label><br>
                         <input type="radio" name="spacing" id="spacing">
                         <label>single Spaced (500 words)</label><br>
                     </div>
+
+                </div>
+                <div class="order-container">
+
                     <div class="order-item">
                         <label for="deadline">Deadline</label><br>
                         <select name="" id="deadline" required>
-                            <option value="" disabled selected>--Deadline</option>
+                            <option value="" disabled selected>--Deadline--</option>
                             <option value="1">Less than 6 Hrs</option>
                             <option value="2">6Hrs</option>
                             <option value="3">12Hrs</option>
@@ -139,12 +146,11 @@
                             <option value="8">More than 4 Days</option>
                         </select>
                     </div>
-                </div>
-                <div class="order-container">
+
                     <div class="order-item">
                         <label for="field">Field</label><br>
                         <select name="field" id="field" required>
-                            <option value="" disabled selected>--Field</option>
+                            <option value="" disabled selected>--Field--</option>
                             <option>Mathematics</option>
                             <option>Chemistry</option>
                             <option>Biology</option>
@@ -185,98 +191,41 @@
                             <option>other</option>
                         </select>
                     </div>
+                    <div class="order-item">
+                        <label for="topic">Topic</label><br>
+                        <input type="text" class="topic" placeholder="--topic--">
+                    </div>
+                    <div class="order-item  file">
+                        <label class="custom-file-upload">
+                            <input type="file" multiple>
+                            <ion-icon class="file-add" name="add-outline"></ion-icon>
+                            Upload your documents
+                        </label>
+                    </div>
 
-                    <div class="order-item">
-                        <label>instructions</label><br>
-                        <textarea name="instruction" rows="8"></textarea>
-                    </div>
-                    <div class="order-item">
-                        <input type="file" multiple>
-                    </div>
                 </div>
 
                 <div class="order-container">
-                    <div class="order-item2">
-                        <label for="firstName">First Name</label><br>
-                        <input type="text" name="firstName" id="firstName">
+                    <div class="order-item">
+                        <label>Instructions</label><br>
+                        <textarea name="instruction" rows="6"></textarea>
                     </div>
-                    <div class="order-item2">
-                        <label for="lastName">Last Name</label><br>
-                        <input type="text" name="lastName" id="lasttName">
+
+                    <div class="order-item">
+                        <label for="firstName">Full Name</label><br>
+                        <input class="item2" type="text" name="firstName" id="firstName">
                     </div>
-                    <div class="order-item2">
+
+                    <div class="order-item">
                         <label for="email">Email Address</label><br>
-                        <input type="email" name="email" id="email">
+                        <input class="item2" type="email" name="email" id="email" placeholder="xyz@email.com">
                     </div>
-                    <div class="order-item2">
+                    <div class="order-item">
                         <label for="phone">phone</label><br>
-                        <input type="number" name="number" id="number">
+                        <input class="item2" type="number" name="number" id="number">
                     </div>
-                    <button type="submit">Continue</button>
-=======
-                <div>
-                    <label for="service">Type of Service</label>
-                    <select name="service" id="service">
-                        <option></option>
-                        <option value="">From Scratch</option>
-                        <option value="">Revision</option>
-                        <option value="">Proof-Reading</option>
-                    </select>
-                </div>
 
-                <div>
-                    <label for="AcademicLevel">Academic Level</label>
-                    <select name="AcademicLevel" id="AcademicLevel">
-                        <option value=""></option>
-                        <option value="">High School</option>
-                        <option value="">Diploma</option>
-                        <option value="">Undergraduate</option>
-                        <option value="">Masters</option>
-                        <option value="">PhD</option>
-                    </select>
-                </div>
 
-                <div>
-                    <label for="service">Partial Page</label>
-                    <select name="service" id="PartialPage">
-                        <option></option>
-                        <option>1/4</option>
-                        <option>1/2</option>
-                        <option>3/4</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="service">Type of Paper</label>
-                    <select name="service" id="service">
-                        <option></option>
-                        <option>Essay</option>
-                        <option>PowerPoint Slides</option>
-
-                    </select>
-                </div>
-
-                <div>
-                    <label for="spacing">Spacing</label><br>
-                    <input type="radio" name="spacing" id="spacing">
-                    <label>Double Spaced (250 words)</label><br>
-                    <input type="radio" name="spacing" id="spacing">
-                    <label>single Spaced (500 words)</label><br>
-                </div>
-                <div>
-                    <label for="deadline">Deadline</label>
-                    <select name="" id="deadline">
-                        <option></option>
-                        <option>Less than 6 Hrs</option>
-                        <option>6Hrs</option>
-                        <option>12Hrs</option>
-                        <option>24Hrs</option>
-                        <option>48Hrs</option>
-                        <option>72Hrs</option>
-                        <option>4days</option>
-                        <option>More than 4 Days</option>
-                    </select>
->>>>>>> 51c63745f13509561761938865f3bd2f112b604d
                 </div>
 
             </form>
@@ -422,25 +371,28 @@
                 </ul>
             </article>
 
-            <article class="footer-social">
+            <article>
                 <h3>Contact Me</h3>
-                <a href="#" class="nav-social-icon">
-                    <ion-icon class="footer-icons" name="logo-twitter"></ion-icon>
-                </a>
-                <a href="#" class="nav-social-icon">
-                    <ion-icon class="footer-icons" name="logo-whatsapp"></ion-icon>
-                </a>
-                <a href="#" class="nav-social-icon">
-                    <ion-icon class="footer-icons" name="mail-outline"></ion-icon>
-                </a>
-                <a href="#" class="nav-social-icon">
-                    <ion-icon class="footer-icons" name="call-outline"></ion-icon>
-                </a>
+                <div class="footer-social">
+                    <a href="#" class="nav-social-icon">
+                        <ion-icon class="footer-icons" name="logo-twitter"></ion-icon>
+                    </a>
+                    <a href="#" class="nav-social-icon">
+                        <ion-icon class="footer-icons" name="logo-whatsapp"></ion-icon>
+                    </a>
+                    <a href="#" class="nav-social-icon">
+                        <ion-icon class="footer-icons" name="mail-outline"></ion-icon>
+                    </a>
+                    <a href="#" class="nav-social-icon">
+                        <ion-icon class="footer-icons" name="call-outline"></ion-icon>
+                    </a>
+                </div>
             </article>
 
 
         </div>
         <p>Noor Technical Writers © 2021. All Rights Reserved</p>
+        <p>Made by Masho Ado</p>
     </footer>
 
 
