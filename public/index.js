@@ -19,4 +19,6 @@ function linkAction(){
     navMenu.classList.remove("show")
 }
 
-navlink.forEach(n => n.addEventListener("click", linkAction))
+navlink.forEach(n => n.addEventListener("click", linkAction));
+
+

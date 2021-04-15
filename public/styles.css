@@ -9,7 +9,6 @@ body {
   margin: 3rem 0 0 0;
   font-family: "poppins", "sans-serif";
   font-size: 0.938rem;
-  font-weight: 500;
 }
 
 ul {
@@ -191,7 +190,7 @@ a {
   width: 100%;
   height: 2.3rem;
   border: 2px solid #070d1f;
-  font-family: poppins, sans-serif;
+  font-family: "poppins", "sans-serif";
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
@@ -206,14 +205,14 @@ a {
 
 .order-section .order-item select:required:invalid option {
   color: black;
-  font-family: poppins, sans-serif;
+  font-family: "poppins", "sans-serif";
 }
 
 .order-section .order-item textarea {
   width: 100%;
   border: 2px solid;
   border-color: #070d1f;
-  font-family: poppins, sans-serif;
+  font-family: "poppins", "sans-serif";
   font-size: 0.9rem;
 }
 
@@ -248,6 +247,21 @@ a {
   height: 2rem;
   border: 2px solid #070d1f;
   margin-bottom: 1rem;
+}
+
+.order-section button {
+  width: 100px;
+  font-family: "poppins", "sans-serif";
+  background: -webkit-gradient(linear, left top, left bottom, from(#3cb0fd), to(#3498db));
+  background: linear-gradient(to bottom, #3cb0fd, #3498db);
+  color: #e6e7e9;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 20px;
+}
+
+.order-section button:hover {
+  background: #3664f4;
 }
 
 .service-container {
@@ -398,11 +412,24 @@ footer .footer-info .footer-icons:hover {
           transform: scale(1.2);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 518px) {
+  .icon-info {
+    max-width: 430px;
+  }
+}
+
+@media screen and (min-width: 765px) {
   .header-toggle,
   .nav-close,
   .nav-social {
     display: none;
+  }
+  .nav-menu {
+    padding-left: 2rem;
+  }
+  .header-logo,
+  .nav-link {
+    font-size: 0.8rem;
   }
   .nav-list {
     display: -webkit-box;
@@ -420,11 +447,6 @@ footer .footer-info .footer-icons:hover {
   }
   .nav-link {
     margin-right: 1.5rem;
-  }
-  .icon-info {
-    max-width: 380px;
-    max-height: 250px;
-    text-align: start;
   }
   .service-items {
     display: -ms-grid;
@@ -451,6 +473,13 @@ footer .footer-info .footer-icons:hover {
   }
   .file {
     margin-top: 24px;
+  }
+  .service-items,
+  .features-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
 }
 /*# sourceMappingURL=styles.css.map */

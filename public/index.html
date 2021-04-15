@@ -74,11 +74,11 @@
 
         <section class="order-section" id="order">
             <h1>Make Your Order</h1>
-            <form action="">
+            <form method="POST">
                 <div class="order-container">
                     <div class="order-item">
                         <label for="service">Type of Service</label><br>
-                        <select id="service" required>
+                        <select id="service" name="typeOfService" required>
                             <option value="" disabled selected>--select service--</option>
                             <option value="1">From Scratch</option>
                             <option value="2">Revision</option>
@@ -88,8 +88,8 @@
 
                     <div class="order-item">
                         <label for="AcademicLevel">Academic Level</label><br>
-                        <select name="AcademicLevel" id="AcademicLevel" required>
-                            <option value="" disabled selected>--Select Academic-level--</option>
+                        <select name="AcademicLevel" id="academicLevel" required>
+                            <option value="" disabled selected>--Select Academiclevel--</option>
                             <option value="1">High School</option>
                             <option value="2">Diploma</option>
                             <option value="3">Undergraduate</option>
@@ -99,7 +99,7 @@
                     </div>
                     <div class="order-item">
                         <label for="service">Type of Paper</label><br>
-                        <select name="service" id="service" required>
+                        <select name="service" id="paper" required>
                             <option value="" disabled selected>--Type of Paper--</option>
                             <option value="2">Essay</option>
                             <option value="3">PowerPoint Slides</option>
@@ -113,7 +113,7 @@
 
                     <div class="order-item">
                         <label for="service">Partial Page</label><br>
-                        <select name="service" id="PartialPage" required>
+                        <select name="service" id="partialPage" required>
                             <option value="" disabled selected>--select a partial page--</option>
                             <option value="1">1/4</option>
                             <option value="2">1/2</option>
@@ -197,36 +197,36 @@
                     </div>
                     <div class="order-item  file">
                         <label class="custom-file-upload">
-                            <input type="file" multiple>
+                            <input type="file" multiple id="file">
                             <ion-icon class="file-add" name="add-outline"></ion-icon>
                             Upload your documents
                         </label>
                     </div>
 
-                </div>
+                    <div class="order-container">
+                        <div class="order-item">
+                            <label>Instructions</label><br>
+                            <textarea name="instruction" rows="6" class="instruction"></textarea>
+                        </div>
 
-                <div class="order-container">
-                    <div class="order-item">
-                        <label>Instructions</label><br>
-                        <textarea name="instruction" rows="6"></textarea>
+                        <div class="order-item">
+                            <label for="firstName">Full Name</label><br>
+                            <input class="item2" type="text" name="fullName" class="firstName">
+                        </div>
+
+                        <div class="order-item">
+                            <label for="email">Email Address</label><br>
+                            <input class="item2" type="email" name="email" class="email" placeholder="xyz@email.com">
+                        </div>
+                        <div class="order-item">
+                            <label for="phone">phone</label><br>
+                            <input class="item2" type="number" name="number" class="number">
+                        </div>
+
+                        <button type="submit">Submit</button>
+
+
                     </div>
-
-                    <div class="order-item">
-                        <label for="firstName">Full Name</label><br>
-                        <input class="item2" type="text" name="firstName" id="firstName">
-                    </div>
-
-                    <div class="order-item">
-                        <label for="email">Email Address</label><br>
-                        <input class="item2" type="email" name="email" id="email" placeholder="xyz@email.com">
-                    </div>
-                    <div class="order-item">
-                        <label for="phone">phone</label><br>
-                        <input class="item2" type="number" name="number" id="number">
-                    </div>
-
-
-                </div>
 
             </form>
         </section>
@@ -395,8 +395,8 @@
         <p>Made by Masho Ado</p>
     </footer>
 
-
-
+    <!-- =================SERVER.JS================== -->
+    <script src="../server.js"></script>
     <!-- =========== INDEX.js =============== -->
     <script src="./index.js"></script>
 </body>
