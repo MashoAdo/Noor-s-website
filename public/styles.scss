@@ -73,6 +73,7 @@ a {
 
 .header-logo {
 	color: $white-color;
+	font-family: "Dancing Script", cursive;
 }
 
 .header-toggle {
@@ -162,6 +163,7 @@ a {
 .home-container {
 	text-align: center;
 	h1 {
+		font-family: "Dancing Script", cursive;
 		font-size: 2.5rem;
 		font-weight: 700;
 	}
@@ -408,13 +410,14 @@ footer {
 	.features-container,
 	.footer-info {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 10px;
 	}
 	form {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		column-gap: 4rem;
+		margin: auto 30px;
 	}
 	.file {
 		margin-top: 24px;
